@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { coinContext } from "../../context/CoinContext";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { allCoin, currency } = useContext(coinContext);
@@ -9,12 +10,14 @@ const Home = () => {
 
   const handleInputChange = (event) => {
     setInputField(event.target.value);
+    if (event.target.value === "") {
+      setDisplayCoin(allCoin);
+    }
   };
 
   const handleSearch = async (event) => {
     event.preventDefault();
     setIsLoading(true);
-    // Simulate a delay to show the loading animation
     await new Promise((resolve) => setTimeout(resolve, 1000));
     const filteredCoins = allCoin.filter((coin) =>
       coin.name.toLowerCase().includes(inputField.toLowerCase())
@@ -73,9 +76,10 @@ const Home = () => {
             <p className="text-right">Market Cap</p>
           </div>
           <div className="divide-y divide-gray-700">
-            {displayCoin.slice(0, 10).map((item, index) => (
-              <div
-                key={index}
+            {displayCoin.slice(0, 10).map((item) => (
+              <Link
+                key={item.id}
+                to={`/coin/${item.id}`}
                 className="grid grid-cols-2 sm:grid-cols-5 gap-4 py-4 px-6 items-center hover:bg-white/5 transition duration-300"
               >
                 <p className="text-sm">{item.market_cap_rank}</p>
@@ -105,7 +109,7 @@ const Home = () => {
                   {currency.symbol}
                   {item.market_cap.toLocaleString()}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

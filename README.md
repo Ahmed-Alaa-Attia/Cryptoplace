@@ -8,9 +8,19 @@ A modern cryptocurrency tracking platform built with React and powered by the Co
 
 ## 📸 Project Screenshots
 
+<details>
+<summary>View Application Screenshots</summary>
+
 ### Homepage
 
-![Homepage Screenshot](./images/screenshot.png)
+![Dashboard](./images/screenshot.png)
+
+### Coin Details
+
+![Coin Details](./images/screen2.png)
+_Detailed view of individual cryptocurrency with price charts and statistics_
+
+</details>
 
 ## 🌈 Features
 
@@ -37,7 +47,7 @@ A modern cryptocurrency tracking platform built with React and powered by the Co
 
 1. Clone the repository
    \`\`\`bash
-   git clone https://github.com/yourusername/cryptoplace.git
+   git clone https://github.com/Ahmed-Alaa-Attia/cryptoplace.git
    \`\`\`
 
 2. Install dependencies
@@ -99,4 +109,4 @@ cryptoplace/
 
 ---
 
-Made with ❤️ by [Alaa Attia]
+Made with ❤️ by Alaa Attia
