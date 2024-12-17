@@ -8,7 +8,7 @@ A modern cryptocurrency tracking platform built with React and powered by the Co
 
 ## 📸 Project Screenshots
 
-<details>
+
 <summary>View Application Screenshots</summary>
 
 ### Homepage
@@ -20,7 +20,7 @@ A modern cryptocurrency tracking platform built with React and powered by the Co
 ![Coin Details](./images/screen2.png)
 _Detailed view of individual cryptocurrency with price charts and statistics_
 
-</details>
+
 
 ## 🌈 Features
 
